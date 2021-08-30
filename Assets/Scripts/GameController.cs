@@ -30,8 +30,6 @@ public class GameController : MonoBehaviour
             }
         }
     }
-
-    // Update is called once per frame
     public void AddScore()
     {
         score += 100;
@@ -41,6 +39,5 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         gameOverText.SetActive(true);
-        Scoretext.text = "Score:" + score;
     }
 }

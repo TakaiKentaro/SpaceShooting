@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6643948702110048748}
   m_Layer: 0
   m_Name: Enemy ship
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5602873885845940833}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.85, y: 4.76, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -94,7 +94,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -122,12 +122,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3cfa2a601f2d9a49aca9acab1eb702c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeOut: 0
-  bulletprefab: {fileID: 8164420666802832286, guid: 182885f661b0c52498b1e995464857fd,
-    type: 3}
+  m_speed: -0.01
   explosion: {fileID: 4339458848079982676, guid: 5d8fe5d4a4740d340a21569dba622d5d,
     type: 3}
-  targetpos: {x: 0, y: 0, z: 0}
+  bulletprefab: {fileID: 8164420666802832286, guid: 182885f661b0c52498b1e995464857fd,
+    type: 3}
 --- !u!50 &6643948702110048748
 Rigidbody2D:
   serializedVersion: 4

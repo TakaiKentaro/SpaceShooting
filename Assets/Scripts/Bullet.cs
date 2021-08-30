@@ -11,7 +11,6 @@ public class Bullet : MonoBehaviour
   
     private void Start()
     {
-        Destroy(gameObject, lifetime);
         getSE = this.GetComponent<AudioSource>();
     }
 
@@ -19,6 +18,7 @@ public class Bullet : MonoBehaviour
     {
         transform.position += new Vector3(0, 0.2f, 0);
         getSE.PlayOneShot(getSE.clip);
+        Destroy(gameObject, lifetime);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,6 +35,4 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-
 }

@@ -34,12 +34,10 @@ public class Player: MonoBehaviour
                 Instantiate(BulletPrefab, shotPoint.position, shotPoint.rotation);
             }
         }
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(gameObject);
-        Destroy(collision.gameObject);
         gameController.GameOver();
     }
 }
