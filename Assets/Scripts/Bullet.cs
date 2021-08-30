@@ -8,10 +8,12 @@ public class Bullet : MonoBehaviour
     public float lifetime;
     public GameObject bullet;
     AudioSource getSE;
-  
+    GameController gameController;
+
     private void Start()
     {
         getSE = this.GetComponent<AudioSource>();
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 
     void Update()
@@ -26,13 +28,14 @@ public class Bullet : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
+            gameController.AddScore();
         }
     }
-    void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.tag == "Enemy")
-        {
-            Destroy(gameObject);
-        }
-    }
+    //void OnCollisionEnter(Collision col)
+    //{
+    //    if (col.gameObject.tag == "Enemy")
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
 }
