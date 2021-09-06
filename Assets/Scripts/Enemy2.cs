@@ -13,4 +13,9 @@ public class Enemy2 : EnemyScripts
     {
         Instantiate(bulletprefab, transform.position, transform.rotation);
     }
+
+    public override void HitBullet()
+    {
+
+    }
 }

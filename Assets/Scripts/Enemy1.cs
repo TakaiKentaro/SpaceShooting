@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Enemy1 : EnemyScripts
 {
+    public override void HitBullet()
+    {
 
+    }
 }
